@@ -1,0 +1,131 @@
+.wrapper{
+    width: 1200px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.search{
+    width: 598px;
+    position: relative;
+}
+
+.search-dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    border: 2px solid var(--primary-color);
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: white;
+}
+
+.search-dropdown.active {
+    display: block;
+}
+
+.search input{
+    -webkit-box-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    color: var(--blackish-color);
+    background-color: #f3f3f3;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 10px 40px 10px 15px;
+    /* box-sizing: border-box; */
+    outline: none;
+    transition: all ease .3s;
+}
+
+.search input:focus{
+    border-color: var(--primary-color);
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,.1), 0 3px 10px 0 rgba(0,0,0,.1);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.search-icon{
+    font-size: 24px;
+    color: var(--primary-color);
+    position: absolute;
+    right: 12px;
+    bottom: calc(50% - 12px);
+    cursor: pointer;
+}
+
+.icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.icon-wrapper:hover p, .icon-wrapper:hover .actual-icon{
+    color: var(--primary-color);
+}
+
+.icon-wrapper:hover .icon-inner-dropdown {
+    display: block;
+}
+
+.icon-wrapper p{
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    color: var(--blackish-color);
+    margin-top: 2px;
+    transition: color 0.3s;
+}
+
+.actual-icon{
+    font-size: 20px;
+    transition: color 0.3s;
+    margin-right: 3px;
+}
+
+#header{
+    height: 64px;
+}
+
+.logo img{
+    width: 146px;
+    height: 100%;
+    margin-bottom: -3px;
+}
+
+.icon-dropdown{
+    position: relative;
+}
+
+.icon-inner-dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.07);
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.icon-dropdown-list li{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.icon-dropdown-list li:hover{
+    background-color: #FEF4EB;
+}
